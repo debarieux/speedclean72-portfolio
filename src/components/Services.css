@@ -43,10 +43,12 @@
   text-align: center;
   margin-bottom: 4rem;
   position: relative;
+  padding: 0 15px; /* Ajout de padding pour u00e9viter que le contenu touche les bords */
+  width: 100%; /* Assure que l'en-tu00eate prend toute la largeur disponible */
 }
 
 #services h2 {
-  font-size: 2.5rem;
+  font-size: 2rem; /* Taille ru00e9duite pour mobile */
   font-weight: 800;
   margin-bottom: 1.5rem;
   color: var(--color-primary-dark);
@@ -54,6 +56,8 @@
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
+  max-width: 100%; /* Empu00eache le du00e9bordement */
+  word-wrap: break-word; /* Permet le retour u00e0 la ligne */
 }
 
 @media (min-width: 768px) {
@@ -66,8 +70,9 @@
   content: '';
   position: absolute;
   bottom: -0.75rem;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%); /* Centre parfaitement la ligne sous le titre */
+  width: 80%; /* Ru00e9duit la largeur pour qu'elle reste dans les limites */
   height: 4px;
   background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
   border-radius: 0;

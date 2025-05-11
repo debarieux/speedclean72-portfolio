@@ -60,7 +60,7 @@ export default function Hero() {
               </Link>
             </div>
             
-            {/* Section supprimu00e9e selon la demande */}
+            {/* Section supprimée selon la demande */}
           </div>
           
           <div className="hero-card slide-in-right" style={{animationDelay: '0.5s'}}>
