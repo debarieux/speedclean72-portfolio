@@ -1,0 +1,332 @@
+/* Styles pour la section Services - Version affirmu00e9e */
+
+#services {
+  padding: 6rem 0;
+  background-color: var(--color-gray-light);
+  position: relative;
+  overflow: hidden;
+}
+
+#services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(135deg, transparent, rgba(14, 165, 233, 0.05));
+  z-index: 0;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+#services::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.05), transparent);
+  z-index: 0;
+  clip-path: polygon(0 100%, 0 0, 100% 100%);
+}
+
+.services-container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+#services h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  color: var(--color-primary-dark);
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (min-width: 768px) {
+  #services h2 {
+    font-size: 3rem;
+  }
+}
+
+#services h2::after {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+  border-radius: 0;
+}
+
+.services-intro {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background-color: white;
+  border-radius: 0;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  z-index: 2;
+}
+
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 50%);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-card:hover::after {
+  opacity: 1;
+}
+
+.service-card:nth-child(1)::before {
+  background: linear-gradient(to right, var(--color-primary), var(--color-primary-light));
+}
+
+.service-card:nth-child(2)::before {
+  background: linear-gradient(to right, var(--color-secondary), var(--color-secondary-light));
+}
+
+.service-card:nth-child(3)::before {
+  background: linear-gradient(to right, var(--color-accent), var(--color-accent-light));
+}
+
+.service-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.service-header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.service-icon {
+  width: 70px;
+  height: 70px;
+  min-width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0;
+  font-size: 2rem;
+  position: relative;
+  margin-right: 1.5rem;
+  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover .service-icon {
+  transform: scale(1.1);
+}
+
+.service-card:nth-child(1) .service-icon {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.service-card:nth-child(2) .service-icon {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.service-card:nth-child(3) .service-icon {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.service-card:nth-child(1) h3 {
+  color: var(--color-primary-dark);
+}
+
+.service-card:nth-child(2) h3 {
+  color: var(--color-secondary-dark);
+}
+
+.service-card:nth-child(3) h3 {
+  color: var(--color-accent-dark);
+}
+
+.service-description {
+  color: #555;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+
+.service-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1;
+  border-top: 1px solid #eee;
+  padding-top: 1.5rem;
+}
+
+.service-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.bullet {
+  position: absolute;
+  left: 0;
+  top: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.service-card:nth-child(1) .bullet {
+  color: var(--color-primary);
+}
+
+.service-card:nth-child(2) .bullet {
+  color: var(--color-secondary);
+}
+
+.service-card:nth-child(3) .bullet {
+  color: var(--color-accent);
+}
+
+.service-footer {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+.service-link {
+  display: inline-flex;
+  align-items: center;
+  color: #555;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.service-card:nth-child(1) .service-link {
+  color: var(--color-primary);
+}
+
+.service-card:nth-child(2) .service-link {
+  color: var(--color-secondary);
+}
+
+.service-card:nth-child(3) .service-link {
+  color: var(--color-accent);
+}
+
+.service-link-icon {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.service-link:hover .service-link-icon {
+  transform: translateX(5px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-card {
+  animation: fadeInUp 0.8s ease forwards;
+  opacity: 0;
+}
+
+.service-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.service-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.service-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
