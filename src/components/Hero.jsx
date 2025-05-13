@@ -30,14 +30,14 @@ export default function Hero() {
             </div>
             
             <h1 className="slide-in-left" style={{animationDelay: '0.3s'}}>
-              <span>TRANSFORMEZ</span>
+              <span>TRANSFORMER</span>
               <span className="gradient-text" data-text="VOS ESPACES">
                 VOS ESPACES
               </span>
             </h1>
             
             <div className="hero-description slide-in-left" style={{animationDelay: '0.5s'}}>
-              <p>Des <strong>solutions de nettoyage professionnelles</strong>, Confiez vos espaces à un expert qui transforme chaque défi en résultat impeccable.</p>
+              <p>Des <strong>solutions de nettoyage professionnelles</strong>, Confier vos espaces à un expert qui transforme chaque défi en résultat impeccable.</p>
             </div>
             
             <div className="hero-buttons slide-in-left" style={{animationDelay: '0.7s'}}>
